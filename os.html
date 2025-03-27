@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RonakOS</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/os.css">
+    <link rel="stylesheet" href="css/icons.css">
+</head>
+<body class="font-ubuntu">
+    <!-- Lock Screen -->
+    <div id="lockScreen" class="lock-screen">
+        <div class="lock-content">
+            <h2 class="system-title">RonakOS</h2>
+            <div class="password-input">
+                <input type="password" id="passwordInput" placeholder="Enter password" class="font-ubuntu">
+                <button id="unlockButton" class="font-ubuntu font-medium">Unlock</button>
+            </div>
+            <div class="lock-footer">
+                Made by Prakit Chetia (Kai)
+            </div>
+        </div>
+    </div>
+
+    <!-- Main OS Interface -->
+    <div id="osInterface" class="os-interface hidden">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="menu-button">
+                <span class="menu-icon">☰</span>
+            </div>
+            <div class="system-tray">
+                <span class="time" id="currentTime">00:00</span>
+                <span class="battery">🔋 100%</span>
+                <span class="wifi">📶</span>
+                <span class="volume">🔊</span>
+            </div>
+        </div>
+
+        <!-- Desktop -->
+        <div class="desktop" id="desktop">
+            <!-- Desktop Icons will be dynamically added here -->
+        </div>
+
+        <!-- Dock -->
+        <div class="dock">
+            <div class="dock-item" data-app="files">
+                <div class="icon icon-files"></div>
+            </div>
+            <div class="dock-item" data-app="terminal">
+                <div class="icon icon-terminal"></div>
+            </div>
+            <div class="dock-item" data-app="browser">
+                <div class="icon icon-browser"></div>
+            </div>
+            <div class="dock-item" data-app="messages">
+                <div class="icon icon-messages"></div>
+            </div>
+            <div class="dock-item" data-app="games">
+                <div class="icon icon-games"></div>
+            </div>
+            <div class="dock-item" data-app="settings">
+                <div class="icon icon-settings"></div>
+            </div>
+        </div>
+
+        <!-- App Windows Container -->
+        <div id="appWindows" class="app-windows"></div>
+        
+        <!-- Credit footer (subtle) -->
+        <div class="os-footer">
+            RonakOS v1.0 | Made by Prakit Chetia (Kai)
+        </div>
+    </div>
+
+    <!-- Load File System first -->
+    <script src="js/fileSystem.js"></script>
+    
+    <!-- Load Control Panel -->
+    <script src="js/controlPanel.js"></script>
+    
+    <!-- Load Main OS -->
+    <script src="js/os.js"></script>
+    
+    <!-- Load Apps -->
+    <script src="js/apps/files.js"></script>
+    <script src="js/apps/terminal.js"></script>
+    <script src="js/apps/browser.js"></script>
+    <script src="js/apps/messages.js"></script>
+    <script src="js/apps/games.js"></script>
+    <script src="js/apps/settings.js"></script>
+</body>
+</html> 

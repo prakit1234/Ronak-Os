@@ -1,0 +1,299 @@
+/* Lock Screen Styles */
+.lock-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../assets/wallpapers/default-lock.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lock-content {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.lock-content h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--light-color);
+}
+
+.password-input {
+    display: flex;
+    gap: 10px;
+}
+
+.password-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+/* OS Interface Styles */
+.os-interface {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    background: url("../assets/wallpapers/default.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Top Bar */
+.top-bar {
+    height: 30px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: var(--light-color);
+    z-index: 100;
+    position: relative;
+}
+
+.system-tray {
+    display: flex;
+    gap: 15px;
+}
+
+/* Desktop */
+.desktop {
+    height: calc(100vh - 80px);
+    width: 100vw;
+    padding: 20px;
+    position: absolute;
+    top: 30px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+/* Dock */
+.dock {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    background-color: var(--dock-bg);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 15px;
+    z-index: 100;
+}
+
+.dock-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.dock-item:hover {
+    transform: scale(1.2);
+}
+
+.dock-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* App Windows */
+.app-windows {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    z-index: 50;
+}
+
+.app-window {
+    position: absolute;
+    background-color: var(--window-bg);
+    border: 1px solid var(--window-border);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    min-width: 300px;
+    min-height: 200px;
+    color: #333;
+    transition: box-shadow 0.3s;
+}
+
+.app-window.active {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    cursor: move;
+}
+
+.window-title {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.minimize {
+    background-color: #ffbd4c;
+}
+
+.maximize {
+    background-color: #00ca56;
+}
+
+.close {
+    background-color: #ff5f57;
+}
+
+.window-content {
+    padding: 10px;
+    height: calc(100% - 30px);
+    overflow: auto;
+}
+
+/* Add styles for the lock footer */
+.lock-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Add styles for the OS footer */
+.os-footer {
+    position: absolute;
+    bottom: 3px;
+    right: 10px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+    z-index: 9;
+    pointer-events: none;
+}
+
+/* Add styles for the control panel pull indicator */
+.pull-indicator:hover::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    animation: pulse 2s infinite;
+}
+
+/* Add styles for minimized windows in the dock */
+.dock-item.has-minimized-window::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+/* Add styles for window animations */
+.app-opening {
+    animation: windowOpen 0.3s cubic-bezier(0.17, 0.84, 0.44, 1);
+}
+
+.app-closing {
+    animation: windowClose 0.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.minimize-animation {
+    animation: windowMinimize 0.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    pointer-events: none;
+}
+
+@keyframes windowOpen {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes windowClose {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes windowMinimize {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100%) scale(0.5);
+    }
+}
+
+/* Add styles for the maximized window state */
+.app-window.maximized {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+} 

@@ -1,0 +1,331 @@
+/* CSS Icons for RonakOS */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Files Icon */
+.icon-files {
+    background: linear-gradient(135deg, #4285f4, #34a853);
+}
+
+.icon-files::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 24px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 4px 0 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Terminal Icon */
+.icon-terminal {
+    background: linear-gradient(135deg, #333, #000);
+}
+
+.icon-terminal::before {
+    content: '>';
+    color: #0f0;
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Browser Icon */
+.icon-browser {
+    background: linear-gradient(135deg, #00aeff, #0066ff);
+    overflow: hidden;
+}
+
+.icon-browser::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.icon-browser::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 2px solid white;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+/* Games Icon */
+.icon-games {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.icon-games::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 20px;
+    background-color: white;
+    border-radius: 4px;
+    transform: translateX(-6px);
+}
+
+.icon-games::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 20px;
+    background-color: white;
+    border-radius: 4px;
+    transform: translateX(6px);
+}
+
+/* Settings Icon */
+.icon-settings {
+    background: linear-gradient(135deg, #757f9a, #d7dde8);
+}
+
+.icon-settings::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.icon-settings::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: 
+        radial-gradient(circle at center, transparent 8px, white 8px, white 10px, transparent 10px) repeat-x;
+    background-size: 7px 28px;
+    transform: rotate(45deg);
+    opacity: 0.8;
+}
+
+/* Messages Icon */
+.icon-messages {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.icon-messages::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    background-color: white;
+    border-radius: 10px;
+    transform: translateY(-2px);
+}
+
+.icon-messages::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-7px, 8px);
+    box-shadow: 0px 0px 0px 2px #0072ff, 
+                7px 0px 0px 0px white, 
+                7px 0px 0px 2px #0072ff, 
+                14px 0px 0px 0px white,
+                14px 0px 0px 2px #0072ff;
+}
+
+/* Folder Icon */
+.icon-folder {
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+}
+
+.icon-folder::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 2px 2px 0 0;
+    transform: translateY(-4px);
+}
+
+.icon-folder::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 2px;
+    transform: translateY(4px);
+}
+
+/* File Icon */
+.icon-file {
+    background: linear-gradient(135deg, #eeeeee, #ffffff);
+    border: 1px solid #ddd;
+}
+
+.icon-file::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 22px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.icon-file::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: #888;
+    border-radius: 1px;
+    box-shadow: 0 4px 0 #888, 0 8px 0 #888;
+    transform: translateY(-6px);
+}
+
+/* Document File Icon */
+.icon-doc {
+    background: linear-gradient(135deg, #2b5797, #4285f4);
+}
+
+.icon-doc::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 24px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.icon-doc::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background-color: #2b5797;
+    box-shadow: 0 4px 0 #2b5797, 0 8px 0 #2b5797;
+    transform: translateY(-4px);
+}
+
+/* Image File Icon */
+.icon-image {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+.icon-image::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.icon-image::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #56ab2f;
+    border-radius: 50%;
+    transform: translate(-4px, -2px);
+    box-shadow: 12px 0 0 rgba(168, 224, 99, 0.8);
+}
+
+/* Desktop Icon Animations */
+.desktop-icon {
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.desktop-icon:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+}
+
+.desktop-icon p {
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+}
+
+.desktop-icon:hover p {
+    transform: scale(1.05);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Dock Icon Animations */
+.dock-item {
+    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.dock-item:hover {
+    transform: scale(1.2) translateY(-5px);
+}
+
+.dock-item::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.dock-item:hover::after {
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    70% { transform: translateY(-5px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.animate-bounce {
+    animation: bounce 0.5s ease;
+}
+
+.animate-pulse {
+    animation: pulse 1s infinite;
+} 
