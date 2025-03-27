@@ -2,9 +2,13 @@
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-![Ronak OS](https://img.shields.io/badge/Ronak%20OS-Web%20Based%20OS-blue?style=for-the-badge)
-![Made With](https://img.shields.io/badge/Made%20With-HTML%20%7C%20CSS%20%7C%20JS-orange?style=for-the-badge)
-![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)
+![Ronak OS](https://img.shields.io/badge/Ronak%20OS-Web%20Based%20OS-blue?style=for-the-badge&logo=firefox&logoColor=white)
+![Made With](https://img.shields.io/badge/Made%20With-HTML%20%7C%20CSS%20%7C%20JS-orange?style=for-the-badge&logo=javascript)
+![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge&logo=alert)
+
+![Status](https://img.shields.io/website?down_color=red&down_message=Offline&up_color=green&up_message=Online&url=https%3A%2F%2Fronak-os.pages.dev)
+![Version](https://img.shields.io/badge/Version-1.0-blue?style=for-the-badge&logo=github)
+![Build](https://img.shields.io/badge/Build-Stable-success?style=for-the-badge&logo=check)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
